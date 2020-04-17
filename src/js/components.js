@@ -16,7 +16,7 @@ class Skills extends HTMLElement {
         <section class="skills_container">
             <ptu-skill title="Kehittäminen" desc="Osaan ja tykkään koodata. Tämä on se mun juttu. Pyrin yksinkertaisiin ratkaisuihin, välttelen magiaa ja kielillä kikkailua. Jos pääsen valitsemaan, niin Javalla mennään, mutta muutkin onnistuu. Erityisen hauskaa tulee, jos pääsen samalla oppimaan uutta!"></ptu-skill>
             <ptu-skill title="Kokonaisuudet" desc="Olen tottunut olemaan monessa mukana. Keskimäärin hankkeissa olen vastannut kokonaisratkaisuista, arkkitehtuurista sekä haastavista teknisistä selvityksistä ja niiden ratkaisuista. Yleensä olen sotkeutunut myös ympäristö ja CI/CD asioihin sekä asiakasrajapintaan."></ptu-skill>
-            <ptu-skill title="Data/AI" desc="Olen sellainen puolivillainen wannabe datahemmo. Pystyn hoitamaan datan esikäsittelyn, analysoinnin, visualisoinnin sekä ottamaan osaa tekoälyn koodauksen, mutta tarvitsen sparrauskaveria algoritmien ja tekoälymallien valinnassa."></ptu-skill>
+            <ptu-skill title="Data/AI" desc="Olen sellainen puolivillainen wannabe datahemmo. Pystyn hoitamaan datan esikäsittelyn, analysoinnin, visualisoinnin sekä ottamaan osaa tekoälyn koodaukseen, mutta tarvitsen sparrauskaveria algoritmien ja tekoälymallien valinnassa."></ptu-skill>
             <ptu-skill title="Ratkaisukyky" desc="Pystyn tekemään niin pienien kuin isojen haasteiden tekniset ratkaisut. Aina tarjouksesta toteutukseen ja ylläpitoon asti. Olen tehnyt tämän useita kertoja. Osan jopa menestyksekkäästi."></ptu-skill>
             <ptu-skill title="Johtaminen" desc="Olen vetänyt tuotekehitystä, tehnyt ja jalkauttanut teknologiastrategioita sekä edustanut teknologiaa liiketoiminnan johtoryhmä- ja strategiatyöskentelyssä. Pomoa minusta ei saa, mutta vastuullisen johtajan kyllä, joka inspiroi esimerkillä ja asiantuntemuksella."></ptu-skill>
             <ptu-skill title="Kommunikointi" desc="Osaan kertoa asiat teknisesti asiantuntijoille ja härmäksi sidosryhmille. Kunnon devaajan tavoin viestin kuitenkin vasta kun minulla on oikeasti asiaa!"></ptu-skill>
@@ -42,7 +42,7 @@ class Teasers extends HTMLElement {
          <div class="teaser_container">
             <ptu-teaser main="15+" title="Vuoden kokemus" desc="Kehittämisestä, suunnittelusta ja ratkaisujen tekemisestä."></ptu-teaser>
             <ptu-teaser main="1000+" title="Valmista juttua" desc="Olen ollut mukana projekteissa, tuotteissa, luomassa uutta, ylläpitämässä vanhaa, ratkaisemassa tuotanto-ongelmia, tekemässä strategiaa, lapioimassa sitä itseään, valitsemassa teknologioita ja tekemässä päätöksiä."></ptu-teaser>
-            <ptu-teaser main="100%" title="Tyytyväisyystakuu" desc="Raahelaislähtöisen on tätä vaikea sanoa ääneen, mutta olen teknisissä asioissa aika hyvä ja pyrin sitä olemaan jatkossakin!"></ptu-teaser>
+            <ptu-teaser main="100%" title="Tyytyväisyystakuu" desc="Tätä on jurona suomalaisena vaikea sanoa ääneen, mutta olen aika hyvä teknisissä asioissa ja aion sitä olla jatkossakin!"></ptu-teaser>
          </div>
 `;
     }
@@ -53,8 +53,13 @@ class Info extends HTMLElement {
         this.innerHTML = `
         <article>
             <h2>Tietoja minusta</h2>
-            <p class="info-text">Hei! Olet jostain syystä ajautunut sivustolleni. Hienoa tavata! Olen monessa liemessä keitetty kehittäjä. Ydinosaamisestani löydät pienen tiivistelmän tältä sivustolta ja LinkedInistä. Mikäli olet kiinnostunut tuottamastani sisällöstä, niin suuntaahan kohti blogiani.
-                Mikäli tarvitset apua teknisissä asioissa tai etsit sparrausta ideoillesi seuraavista yksisarvisista ohjelmistoalla niin älä epäröi ottaa yhteyttä.
+            <p class="info-text">Hei! Olet jostain syystä ajautunut sivustolleni. Hienoa tavata! 
+                
+                Olen monessa liemessä keitetty kehittäjä. Ydinosaamisestani löydät pienen tiivistelmän tältä sivustolta ja LinkedInistä.<br> <br>
+                
+                Mikäli olet kiinnostunut tuottamastani sisällöstä, niin suuntaahan kohti blogiani.
+                
+                Ota ihmeessä yhteyttä mikäli tarvitset apua teknisissä asioissa tai etsit sparrausta ideoillesi.
                 Tapaamisiin!
             </p>
             <section class="info_container">

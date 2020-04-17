@@ -64,5 +64,8 @@ const Skills = () => {
     console.group("Yhteystiedot:");
     console.log("petri.tuomaala@gmail.com");
     console.groupEnd();
+    console.group("Sivun koodit:");
+    console.log("https://github.com/ptuomaal/petrituomaala");
+    console.groupEnd();
 }
 export default Skills;
