@@ -63,14 +63,10 @@ class Info extends HTMLElement {
                 Tapaamisiin!
             </p>
             <section class="info_container">
-                <p>Nimi</p><p class="info_value">Petri Tuomaala</strong></p>
-    
-                <p>Sähköposti</p><p><a href="mailto:tuomaala.info@gmail.com">tuomaala.info@gmail.com</strong></a></p>
-    
-                <p>Asuinpaikka</p><p class="info_value">Oulu</>
-    
-                <p>Blogi</p><p><a href="https://dev.to/ptuomaal/">Dev.to</a></p>
-    
+                <p>Nimi</p><p class="info_value">Petri Tuomaala</p>
+                <p>Asuinpaikka</p><p class="info_value">Oulu</p>
+                <p>Sähköposti</p><p><a href="mailto:tuomaala.info@gmail.com">tuomaala.info@gmail.com</strong></a></p>    
+                <p>Blogi</p><p><a href="https://dev.to/ptuomaal/">Dev.to</a></p>    
                 <p>Some</p><p><a href="https://www.linkedin.com/in/ptuomaal/">LinkedIn</a></p>
             </section>
      </article>
