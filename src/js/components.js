@@ -65,7 +65,7 @@ class Info extends HTMLElement {
             <section class="info_container">
                 <p>Nimi</p><p class="info_value">Petri Tuomaala</strong></p>
     
-                <p>Sähköposti</p><p class="info_value">petri.tuomaala@gmail.com</strong></p>
+                <p>Sähköposti</p><a href="tuomaala.info@gmail.com">tuomaala.info@gmail.com</strong></a>
     
                 <p>Asuinpaikka</p><p class="info_value">Oulu</>
     

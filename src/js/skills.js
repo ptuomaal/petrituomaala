@@ -62,7 +62,7 @@ const Skills = () => {
     console.groupEnd();
     console.groupEnd();
     console.group("Yhteystiedot:");
-    console.log("petri.tuomaala@gmail.com");
+    console.log("tuomaala.info@gmail.com");
     console.groupEnd();
     console.group("Sivun koodit:");
     console.log("https://github.com/ptuomaal/petrituomaala");
