@@ -1,3 +1,21 @@
+import { t, getLang, setLang } from './i18n.js';
+
+function langAware(cls) {
+    const origConnected = cls.prototype.connectedCallback;
+    cls.prototype.connectedCallback = function () {
+        this._langHandler = () => this.render();
+        document.addEventListener('lang-changed', this._langHandler);
+        this.render();
+    };
+    cls.prototype.disconnectedCallback = function () {
+        if (this._langHandler) {
+            document.removeEventListener('lang-changed', this._langHandler);
+        }
+    };
+    cls.prototype.render = origConnected;
+    return cls;
+}
+
 class Skill extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
@@ -9,21 +27,21 @@ class Skill extends HTMLElement {
     }
 }
 
-class Skills extends HTMLElement {
+const Skills = langAware(class extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-        <h2>Taidot</h2>
+        <h2>${t('skills.title')}</h2>
         <section class="skills_container">
-            <ptu-skill title="Kehittäminen" desc="Osaan ja tykkään koodata. Tämä on se mun juttu. Pyrin yksinkertaisiin ratkaisuihin, välttelen magiaa ja kielillä kikkailua. Jos pääsen valitsemaan, niin Javalla mennään, mutta muutkin onnistuu. Erityisen hauskaa tulee, jos pääsen samalla oppimaan uutta!"></ptu-skill>
-            <ptu-skill title="Kokonaisuudet" desc="Olen tottunut olemaan monessa mukana. Keskimäärin hankkeissa olen vastannut kokonaisratkaisuista, arkkitehtuurista sekä haastavista teknisistä selvityksistä ja niiden ratkaisuista. Yleensä olen sotkeutunut myös ympäristö ja CI/CD asioihin sekä asiakasrajapintaan."></ptu-skill>
-            <ptu-skill title="Data/AI" desc="Olen sellainen puolivillainen wannabe datahemmo. Pystyn hoitamaan datan esikäsittelyn, analysoinnin, visualisoinnin sekä ottamaan osaa tekoälyn koodaukseen, mutta tarvitsen sparrauskaveria algoritmien ja tekoälymallien valinnassa."></ptu-skill>
-            <ptu-skill title="Ratkaisukyky" desc="Pystyn tekemään niin pienien kuin isojen haasteiden tekniset ratkaisut. Aina tarjouksesta toteutukseen ja ylläpitoon asti. Olen tehnyt tämän useita kertoja. Osan jopa menestyksekkäästi."></ptu-skill>
-            <ptu-skill title="Johtaminen" desc="Olen vetänyt tuotekehitystä, tehnyt ja jalkauttanut teknologiastrategioita sekä edustanut teknologiaa liiketoiminnan johtoryhmä- ja strategiatyöskentelyssä. Pomoa minusta ei saa, mutta vastuullisen johtajan kyllä, joka inspiroi esimerkillä ja asiantuntemuksella."></ptu-skill>
-            <ptu-skill title="Kommunikointi" desc="Osaan kertoa asiat teknisesti asiantuntijoille ja härmäksi sidosryhmille. Kunnon devaajan tavoin viestin kuitenkin vasta kun minulla on oikeasti asiaa!"></ptu-skill>
+            <ptu-skill title="${t('skill.1.title')}" desc="${t('skill.1.desc')}"></ptu-skill>
+            <ptu-skill title="${t('skill.2.title')}" desc="${t('skill.2.desc')}"></ptu-skill>
+            <ptu-skill title="${t('skill.3.title')}" desc="${t('skill.3.desc')}"></ptu-skill>
+            <ptu-skill title="${t('skill.4.title')}" desc="${t('skill.4.desc')}"></ptu-skill>
+            <ptu-skill title="${t('skill.5.title')}" desc="${t('skill.5.desc')}"></ptu-skill>
+            <ptu-skill title="${t('skill.6.title')}" desc="${t('skill.6.desc')}"></ptu-skill>
         </section>
 `;
     }
-}
+});
 
 class Teaser extends HTMLElement {
     connectedCallback() {
@@ -36,71 +54,68 @@ class Teaser extends HTMLElement {
 `;
     }
 }
-class Teasers extends HTMLElement {
+
+const Teasers = langAware(class extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
          <div class="teaser_container">
-            <ptu-teaser main="15+" title="Vuoden kokemus" desc="Kehittämisestä, suunnittelusta ja ratkaisujen tekemisestä."></ptu-teaser>
-            <ptu-teaser main="1000+" title="Valmista juttua" desc="Olen ollut mukana projekteissa, tuotteissa, luomassa uutta, ylläpitämässä vanhaa, ratkaisemassa tuotanto-ongelmia, tekemässä strategiaa, lapioimassa sitä itseään, valitsemassa teknologioita ja tekemässä päätöksiä."></ptu-teaser>
-            <ptu-teaser main="100%" title="Tyytyväisyystakuu" desc="Tätä on jurona suomalaisena vaikea sanoa ääneen, mutta olen aika hyvä teknisissä asioissa ja aion sitä olla jatkossakin!"></ptu-teaser>
+            <ptu-teaser main="${t('teaser.1.main')}" title="${t('teaser.1.title')}" desc="${t('teaser.1.desc')}"></ptu-teaser>
+            <ptu-teaser main="${t('teaser.2.main')}" title="${t('teaser.2.title')}" desc="${t('teaser.2.desc')}"></ptu-teaser>
+            <ptu-teaser main="${t('teaser.3.main')}" title="${t('teaser.3.title')}" desc="${t('teaser.3.desc')}"></ptu-teaser>
          </div>
 `;
     }
-}
+});
 
-class Info extends HTMLElement {
+const Info = langAware(class extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
         <article>
-            <h2>Tietoja minusta</h2>
-            <p class="info-text">Hei! Olet jostain syystä ajautunut sivustolleni. Hienoa tavata! 
-                
-                Olen monessa liemessä keitetty kehittäjä. Ydinosaamisestani löydät pienen tiivistelmän tältä sivustolta ja LinkedInistä.<br> <br>
-                
-                Mikäli olet kiinnostunut tuottamastani sisällöstä, niin suuntaahan kohti blogiani.
-                
-                Ota ihmeessä yhteyttä mikäli tarvitset apua teknisissä asioissa tai etsit sparrausta ideoillesi.
-                Tapaamisiin!
-            </p>
+            <h2>${t('info.title')}</h2>
+            <p class="info-text">${t('info.text')}</p>
             <section class="info_container">
-                <p>Nimi</p><p class="info_value">Petri Tuomaala</p>
-                <p>Asuinpaikka</p><p class="info_value">Oulu</p>
-                <p>Sähköposti</p><p><a href="mailto:info@petrituomaala.fi">info@petrituomaala.fi</strong></a></p>    
-                <p>Blogi</p><p><a href="https://dev.to/ptuomaal/">Dev.to</a></p>    
-                <p>Some</p><p><a href="https://www.linkedin.com/in/ptuomaal/">LinkedIn</a></p>
+                <p>${t('info.name.label')}</p><p class="info_value">${t('info.name.value')}</p>
+                <p>${t('info.location.label')}</p><p class="info_value">${t('info.location.value')}</p>
+                <p>${t('info.currently.label')}</p><p class="info_value">${t('info.currently.value')}</p>
+                <p>${t('info.email.label')}</p><p><a href="mailto:info@petrituomaala.fi">info@petrituomaala.fi</a></p>
+                <p>${t('info.blog.label')}</p><p><a href="https://dev.to/ptuomaal/">Dev.to</a></p>
+                <p>${t('info.social.label')}</p><p><a href="https://www.linkedin.com/in/ptuomaal/">LinkedIn</a></p>
             </section>
      </article>
 `;
     }
-}
-class Header extends HTMLElement {
-    connectedCallback() {
-        this.innerHTML = `
-        <header>
-            <div class="logo_container">
-                <h1>Petri Tuomaala</h1>
-                <span>#Devaaja</span><span>#Arkkitehti</span>
-            </div>
-        </header>
-`;
-    }
-}
+});
 
-class Banner extends HTMLElement {
+const Header = langAware(class extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-        <p>${this.getAttribute("text")}</p>
+        <div class="logo_container">
+            <h1>Petri Tuomaala</h1>
+            <span>${t('header.tag1')}</span><span>${t('header.tag2')}</span><span>${t('header.tag3')}</span>
+        </div>
+        <button class="lang-toggle" onclick="this.getRootNode().querySelector('ptu-header').__toggle()">${t('lang.toggle')}</button>
 `;
     }
-}
+});
+Header.prototype.__toggle = function () {
+    setLang(getLang() === 'fi' ? 'en' : 'fi');
+};
 
-class Footer extends HTMLElement {
+const Banner = langAware(class extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-        <p>Petri Tuomaala 2020</p>
+        <p>${t('banner.text')}</p>
 `;
     }
-}
+});
+
+const Footer = langAware(class extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+        <p>${t('footer.text')} ${new Date().getFullYear()}</p>
+`;
+    }
+});
 
 customElements.define('ptu-skill', Skill);
 customElements.define('ptu-teaser', Teaser);

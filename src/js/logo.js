@@ -18,8 +18,8 @@ const Logo = () => {
 || P::::::::P                T:::::::::T        UU:::::::::::::UU   ||
 || P::::::::P                T:::::::::T          UU:::::::::UU     ||
 || PPPPPPPPPP                TTTTTTTTTTT            UUUUUUUUU       ||
-====================================================================== 
-%c        :: #Devaaja #Arkkitehti ::    
+======================================================================
+%c        :: #Arkkitehti #Data #AI ::
 `, "color:#fa8b60", "color:gray; font-size:18px")
 }
 export default Logo;

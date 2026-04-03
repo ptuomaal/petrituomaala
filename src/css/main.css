@@ -15,13 +15,15 @@
     --font-weight-heavy:600;
     --spacing-big:1rem;
     --spacing-normal:0.5rem;
+    --spacing-small:0.25rem;
+    --small-opacity:0.95;
+    --mild-opacity:0.8;
 }
 
 .main_container {
     display: grid;
     grid-gap: 0px;
     background-color: var(--base-white-color);
-
     grid-template-rows: auto auto 125px auto auto 125px ;
     grid-template-areas:
             "header"
@@ -32,15 +34,20 @@
             "footer";
 }
 
+
 body {
     font-family: 'Montserrat', sans-serif;
     font-weight: var(--font-weight-normal);
     margin: 0rem;
     padding: 0rem;
+    background-image: url('../img/bg-tech.png');
+    background-repeat: repeat-x;
 }
 
 span {
     margin: var(--spacing-normal);
+    background-color: var(--base-white-color);
+    font-weight: 400;
 }
 
 p {
@@ -49,10 +56,27 @@ p {
 }
 
 .logo_container {
+     text-transform: uppercase;
+     padding: var(--spacing-normal);
+     width: 350px;
+     text-align: center;
+ }
+
+.title_container {
     text-transform: uppercase;
     padding: var(--spacing-normal);
-    width: 350px;
+    width: auto;
     text-align: center;
+}
+
+.title_container span {
+    font-weight: 700;
+}
+
+.title_container a {
+    color: var(--highlight-color);
+    font-weight: var(--font-weight-heavy);
+    text-decoration: none;
 }
 
 h1 {
@@ -109,6 +133,7 @@ article p {
 
 .head {
     grid-area: header;
+    position: relative;
     background-size: cover;
     background-repeat: no-repeat;
     resize: both;
@@ -120,6 +145,30 @@ article p {
     justify-content: center;
     align-content: start;
 }
+
+.lang-toggle {
+    position: absolute;
+    top: var(--spacing-big);
+    right: var(--spacing-big);
+    background-color: var(--highlight-color);
+    border: 1px solid var(--highlight-color);
+    color: var(--base-white-color);
+    font-family: 'Montserrat', sans-serif;
+    font-size: var(--font-size-extra-small);
+    font-weight: var(--font-weight-semi);
+    text-transform: uppercase;
+    padding: var(--spacing-small) var(--spacing-normal);
+    cursor: pointer;
+    letter-spacing: 0.05em;
+    z-index: 10;
+}
+
+.lang-toggle:hover {
+    background-color: var(--highlight-color);
+    border-color: var(--highlight-color);
+}
+
+
 .main {
     grid-area: main;
     padding: var(--spacing-normal);
@@ -142,6 +191,18 @@ article p {
     align-content: center;
     text-transform: uppercase;
 }
+.header_section {
+    grid-area: visio;
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: var(--highlight-color);
+    color: var(--base-white-color);
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    text-transform: uppercase;
+}
+
 .banner p{
     font-size: var(--font-size-large);
 }

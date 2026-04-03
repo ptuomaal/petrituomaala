@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <link rel="apple-touch-icon" sizes="178x178" href="/img/logo.png">
+    <link rel="apple-touch-icon" sizes="178x178" href="/img/logo_small.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
 
@@ -15,18 +15,18 @@
     <meta name="theme-color" content="#ffffff">
     <title>Petri Tuomaala</title>
     <meta name="keywords"
-          content="Tuomaala, Kehittäjä, Arkkitehti, Koodaaja, Koodaus, Devaaja, devaus, ai, data, Petri">
+          content="Tuomaala, Arkkitehti, Arkkitehtuuri, Data, Tekoäly, AI, Kehittäjä, Johtaja, VP of Data, Petri">
     <meta name="description"
-          content="Yli 15 vuoden kokemus kehittämisestä, suunnittelusta ja ratkaisujen tekemisestä. Unelmoi sinä, minä ratkaisen">
+          content="Arkkitehtuuri, data ja tekoäly – rakennettu kestämään. Yli 20 vuoden kokemus kehittämisestä, arkkitehtuurista ja teknologiajohtamisesta.">
 
     <meta name="image"
           content="https://petrituomaala.fi/img/logo_ptu.png">
-    <meta name="robots" content="">
+    <meta name="robots" content="all">
     <meta property="og:site_name" content="Petri Tuomaala">
     <meta property="og:title" content="Petri Tuomaala">
     <meta property="og:url" content="https://petrituomaala.fi/">
     <meta property="og:description"
-          content="Yli 15 vuoden kokemus kehittämisestä, suunnittelusta ja ratkaisujen tekemisestä. Unelmoi sinä, minä ratkaisen">
+          content="Arkkitehtuuri, data ja tekoäly – rakennettu kestämään. Yli 20 vuoden kokemus kehittämisestä, arkkitehtuurista ja teknologiajohtamisesta.">
     <meta property="og:type" content="website">
     <meta property="og:image"
           content="https://petrituomaala.fi/img/logo_ptu.png">
@@ -35,27 +35,35 @@
     <meta name="twitter:title" content="Petri Tuomaala">
     <meta name="twitter:url" content="https://petrituomaala.fi/">
     <meta name="twitter:description"
-          content="Yli 15 vuoden kokemus kehittämisestä, suunnittelusta ja ratkaisujen tekemisestä. Unelmoi sinä, minä ratkaisen">
+          content="Arkkitehtuuri, data ja tekoäly – rakennettu kestämään. Yli 20 vuoden kokemus kehittämisestä, arkkitehtuurista ja teknologiajohtamisesta.">
     <meta name="twitter:image"
           content="https://petrituomaala.fi/img/logo_ptu.png">
-    <base href=".">
+    <link rel="alternate" hreflang="fi" href="https://petrituomaala.fi/">
+    <link rel="alternate" hreflang="en" href="https://petrituomaala.fi/?lang=en">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="manifest" href="manifest.json">
+    <meta name="application-name" content="Petri Tuomaala">
+    <meta name="msapplication-navbutton-color" content="#fa8b60">
+    <meta name="msapplication-starturl" content="/">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Petri Tuomaala">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 <div class="main_container">
-    <div class="head">
-        <div class="header_container">
-            <ptu-header></ptu-header>
-        </div>
-    </div>
+
+    <header class="head">
+        <ptu-header></ptu-header>
+    </header>
 
     <main class="main">
         <ptu-info></ptu-info>
     </main>
 
     <div class="banner">
-       <ptu-banner text="Unelmoi sinä, minä ratkaisen"></ptu-banner>
+       <ptu-banner></ptu-banner>
     </div>
 
     <div class="skills">
