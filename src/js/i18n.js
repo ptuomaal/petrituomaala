@@ -3,7 +3,7 @@ const translations = {
         "header.tag1": "#TEKNOLOGIAJOHTAJA",
         "header.tag2": "#DATA",
         "header.tag3": "#ARKKITEHTI",
-        "header.tag4": "#TEKOÄLY",
+        "header.tag4": "#AI",
 
         "banner.text": "Ideasta tuotantoon",
 
@@ -31,11 +31,11 @@ const translations = {
         "skill.5.title": "Johtaminen",
         "skill.5.desc": "Olen johtanut tuotekehitystä ja teknologiaorganisaatioita useissa yrityksissä. Tiimit ovat olleet kooltaan muutamasta henkilöstä yli 40 henkilön pohjoismaiseen tiimiin. Teknologiastrategian rakentaminen ja jalkauttaminen liiketoimintatavoitteista lähtien on ydinosaamistani. Olen ollut mukana kasvattamassa liiketoimintaa ja rakentamassa organisaatioita jotka pystyvät toimittamaan.",
         "skill.6.title": "Kommunikointi",
-        "skill.6.desc": "Pystyn puhumaan arkkitehtuurista kehittäjille, liiketoimintahyödyistä johdolle ja vaatimustenmukaisuudesta hallitukselle. Sama asia, eri kehykset. En pidä jaarittelusta, mutta osaan kertoa monimutkaisista asioista selkeästi silloin, kun se oikeasti ratkaisee jotakin.",
+        "skill.6.desc": "Pystyn puhumaan arkkitehtuurista kehittäjille, liiketoimintahyödyistä johdolle ja vaatimustenmukaisuudesta hallitukselle. Sama asia, eri kehykset. En pidä jaarittelusta, mutta osaan kertoa monimutkaisista asioista selkeästi.",
 
         "teaser.1.main": "20+",
         "teaser.1.title": "Vuoden kokemus",
-        "teaser.1.desc": "Ohjelmistokehityksestä, arkkitehtuurista ja teknologiajohtamisesta.",
+        "teaser.1.desc": "Ohjelmistokehityksestä, arkkitehtuureista ja teknologiajohtamisesta.",
         "teaser.2.main": "4",
         "teaser.2.title": "CTO/VP-tason roolia",
         "teaser.2.desc": "Joissa rakentanut tiimejä, vastannut teknologiastrategiasta ja johtanut tuotekehitystä.",
