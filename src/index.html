@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="fi">
+<html lang="fi" data-theme="light">
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <link rel="apple-touch-icon" sizes="178x178" href="/img/logo_small.png">
+    <link rel="apple-touch-icon" sizes="178x178" href="img/logo_small.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
 
@@ -14,8 +13,9 @@
     <meta name="msapplication-TileColor" content="#2b5797">
     <meta name="theme-color" content="#ffffff">
     <title>Petri Tuomaala</title>
+    <link rel="canonical" href="https://petrituomaala.fi/">
     <meta name="keywords"
-          content="Tuomaala, Arkkitehti, Arkkitehtuuri, Data, Tekoäly, AI, Kehittäjä, Johtaja, VP of Data, Petri">
+          content="Tuomaala, Arkkitehti, Arkkitehtuuri, Data, Tekoäly, AI, Kehittäjä, Teknologiajohtaja, CTO, VP of Engineering, VP of Data, SaaS, Ohjelmistoarkkitehti, Software Architect, Tech Leader, Petri">
     <meta name="description"
           content="Arkkitehtuuri, data ja tekoäly – rakennettu kestämään. Yli 20 vuoden kokemus kehittämisestä, arkkitehtuurista ja teknologiajohtamisesta.">
 
@@ -30,6 +30,7 @@
     <meta property="og:type" content="website">
     <meta property="og:image"
           content="https://petrituomaala.fi/img/logo_ptu.png">
+    <meta property="og:image:alt" content="Petri Tuomaala">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@tuomape">
     <meta name="twitter:title" content="Petri Tuomaala">
@@ -38,41 +39,50 @@
           content="Arkkitehtuuri, data ja tekoäly – rakennettu kestämään. Yli 20 vuoden kokemus kehittämisestä, arkkitehtuurista ja teknologiajohtamisesta.">
     <meta name="twitter:image"
           content="https://petrituomaala.fi/img/logo_ptu.png">
+    <meta name="twitter:image:alt" content="Petri Tuomaala">
     <link rel="alternate" hreflang="fi" href="https://petrituomaala.fi/">
     <link rel="alternate" hreflang="en" href="https://petrituomaala.fi/?lang=en">
     <meta name="mobile-web-app-capable" content="yes">
     <link rel="manifest" href="manifest.json">
-    <meta name="application-name" content="Petri Tuomaala">
     <meta name="msapplication-navbutton-color" content="#fa8b60">
     <meta name="msapplication-starturl" content="/">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-title" content="Petri Tuomaala">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+        document.documentElement.setAttribute('data-theme',
+            localStorage.getItem('ptu-theme') || (matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light'));
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="js/components.js" as="script" crossorigin>
+    <link rel="preload" href="js/i18n.js" as="script" crossorigin>
+    <link rel="preload" href="img/header1.png" as="image">
     <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 </head>
 <body>
+<a href="#main-content" class="skip-link">Skip to content</a>
 <div class="main_container">
 
     <header class="head">
         <ptu-header></ptu-header>
     </header>
 
-    <main class="main">
+    <main class="main" id="main-content">
         <ptu-info></ptu-info>
     </main>
 
-    <div class="banner">
+    <div class="banner" role="complementary">
        <ptu-banner></ptu-banner>
     </div>
 
-    <div class="skills">
+    <section class="skills" aria-label="Skills">
         <ptu-skills></ptu-skills>
-    </div>
+    </section>
 
-    <div class="teaser">
+    <section class="teaser" aria-label="Experience highlights">
         <ptu-teasers></ptu-teasers>
-    </div>
+    </section>
 
     <footer class="footer">
         <ptu-footer></ptu-footer>

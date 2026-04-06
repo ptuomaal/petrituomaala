@@ -4,10 +4,18 @@ import Skills from "./skills.js";
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
         navigator.serviceWorker.register('./serviceworker.js').then(function(registration) {
-            // Registration was successful
+            // Check for updates on every page load
+            registration.update();
 
-        }, function(err) {
-            // registration failed :(
+            // When a new SW is found and installed, reload to activate it
+            registration.addEventListener('updatefound', function() {
+                const newWorker = registration.installing;
+                newWorker.addEventListener('statechange', function() {
+                    if (newWorker.state === 'activated') {
+                        window.location.reload();
+                    }
+                });
+            });
         });
     });
 }

@@ -1,4 +1,4 @@
-const version = "1.0.0";
+const version = "3.4.0";
 const cacheName = `ptu-${version}`;
 
 self.addEventListener('install', e => {
@@ -8,16 +8,22 @@ self.addEventListener('install', e => {
                 '/',
                 '/index.html',
                 '/css/main.css',
+                '/css/cv.css',
+                '/cv.html',
                 '/js/components.js',
                 '/js/i18n.js',
                 '/js/logo.js',
                 '/js/main.js',
+                '/js/skills.js',
                 '/img/favicon-16x16.png',
                 '/img/favicon-32x32.png',
                 '/img/header1.png',
                 '/img/header2.png',
                 '/img/header2_small.png',
-                '/img/header_small.png'
+                '/img/header_small.png',
+                '/img/bg-tech.png',
+                '/img/logo_small.png',
+                '/img/logo_ptu.png'
             ]);
         }).then(() => self.skipWaiting())
     );

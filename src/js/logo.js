@@ -1,5 +1,6 @@
+import { t } from './i18n.js';
+
 const Logo = () => {
-    console.clear()
     console.log(`%c
 ======================================================================
 || PPPPPPPPPPPPPPPPP   TTTTTTTTTTTTTTTTTTTTTTTUUUUUUUU     UUUUUUUU ||
@@ -19,7 +20,7 @@ const Logo = () => {
 || P::::::::P                T:::::::::T          UU:::::::::UU     ||
 || PPPPPPPPPP                TTTTTTTTTTT            UUUUUUUUU       ||
 ======================================================================
-%c        :: #Arkkitehti #Data #AI ::
+%c        :: ${t('header.tag1')} ${t('header.tag2')} ${t('header.tag3')} ${t('header.tag4')} ::
 `, "color:#fa8b60", "color:gray; font-size:18px")
 }
 export default Logo;
